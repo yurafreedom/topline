@@ -85,6 +85,7 @@
 	text-transform: uppercase;
 	color: #fff;
 	transition: all .3s ease-in-out;
+	cursor: pointer;
 	&:hover, &:active, &:focus {
 		color: #00fff6;
 	}	
