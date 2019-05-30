@@ -1,0 +1,124 @@
+.first-block {
+	background-image: url('../img/header-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	padding-top: 230px;
+	padding-bottom: 110px;
+	&__container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		width: 600px;
+	}
+	&__title {
+		display: block;
+		font-size: 48px;
+		font-weight: 700;
+		color: #00fff6;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+	&__description {
+		display: block;
+		width: 530px;
+		font-size: 34px;
+		font-weight: 700;
+		color: #fff;
+		margin: 0;
+		margin-bottom: 60px;
+	}
+	&__list {
+		position: relative;
+		width: 458px;
+		padding-top: 20px;
+		padding-left: 30px;
+		padding-bottom: 58px;
+		background-image: url('../img/border.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+	}
+	&__list li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 35px;
+	}
+	&__list-option {
+		display: block;
+		margin-left: 40px;
+		font-size: 18px;
+		font-weight: 400;
+		color: #fff;
+		width: 320px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.first-block {
+		padding-top: 120px;
+		&__container {
+			flex-direction: column;
+		}
+		&__heading {
+			width: 100%;
+		}
+		&__list {
+			width: 100%;
+			background-size: 100% 100%;
+			padding-left: 15px;
+			padding-bottom: 32px;
+		}
+		&__list-option {
+			font-size: 16px;
+			width: 200px;
+			margin-left: 20px;
+		}
+		&__title {
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+		&__description {
+			width: 100%;
+			font-size: 20px;
+			margin-bottom: 34px;
+		}
+		.btn--payment {
+			width: 290px;
+			position: absolute;
+			font-size: 15px;
+			bottom: -76px;
+		}
+	}	
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.first-block {
+		&__heading {
+			width: 300px;
+		}
+		&__list {
+			width: 340px;
+			background-size: 100% 100%;
+		}
+		&__list-option {
+			font-size: 16px;
+			width: 200px;
+			margin-left: 20px;
+		}
+		&__title {
+			font-size: 36px;
+		}
+		&__description {
+			width: 300px;
+			font-size: 24px;
+		}
+		.btn--payment {
+			width: 300px;
+		}
+	}
+}

@@ -1,0 +1,85 @@
+.call-block {
+	&__background {
+		position: absolute;
+		z-index: -1;
+		top: -40px;
+		left: 190px;
+	}
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 100px;
+	}
+	&__heading {
+		margin-right: 100px;
+	}
+	&__title {
+		width: 308px;
+		font-size: 30px;
+		font-weight: 800;
+		color: #000;
+		line-height: 1.46;
+	}
+	&__content-inner {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 15px;
+	}
+	&__content-inner p {
+		display: block;
+		width: 230px;
+	}
+	&__content-inner p, &__content-request p {
+		margin: 0;
+		font-size: 18px;
+		font-weight: 400;
+		color: #000;
+	}
+	&__content-inner p {
+		margin-right: 40px;
+	}
+	&__content-request p {
+		margin-bottom: 25px;		
+	}
+	&__content-tel {
+		display: block;
+		font-size: 40px;
+		font-weight: 800;
+		line-height: 1.425;
+		transition: all .3s ease-in-out;
+		color: #000;
+		&:hover, &:focus, &:active {
+			color: #00fff6;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.call-block {
+		&__container {
+			flex-direction: column;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.call-block {
+		&__heading {
+			margin-right: 0;
+		}
+		&__title {
+			width: 280px;
+			font-size: 24px;
+		}
+		&__content-inner p {
+			margin-right: 10px;
+		}
+		&__content-tel {
+			font-size: 20px;
+		}
+		&__content-inner p, &__content-request p {
+			font-size: 16px;
+		}
+	}
+}

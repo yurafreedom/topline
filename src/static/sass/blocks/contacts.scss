@@ -1,0 +1,70 @@
+.contacts-block {
+	&__info-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		width: 214px;
+	}
+	&__title {
+		display: block;
+		font-size: 18px;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		color: #000;
+	}
+	&__text {
+		display: block;
+		margin: 0;
+		font-size: 17px;
+		font-weight: 400;
+		color: #000;
+	}
+	&__tel {
+		display: block;
+		font-size: 24px;
+		font-weight: 400;
+		color: #000;
+		transition: all .3s ease-in-out;
+		&:hover, &:active, &:focus {
+			color: #00fff6;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.contacts-block {
+		&__info-block {
+			flex-direction: column;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.contacts-block {
+		&__card {
+			width: 180px;
+		}
+		&__title {
+			font-size: 16px;
+			text-align: center;
+		}
+		&__text {
+			font-size: 14px;
+			text-align: center;
+		}
+		&__tel {
+			font-size: 18px;
+			text-align: center;
+		}
+		.btn--contacts-request {
+			width: 180px;
+		}
+	}
+}

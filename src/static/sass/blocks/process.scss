@@ -1,0 +1,84 @@
+.process-block {
+	padding-top: 56px;
+	padding-bottom: 85px;
+	&__title {
+		display: block;
+		font-size: 48px;
+		font-weight: 800;
+		color: #000;
+		margin-bottom: 64px;
+	}
+	&__list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	&__card {
+		display: flex;
+		flex-direction: row;
+		width: 510px;
+		&:not(:nth-child(2n)) {
+			margin-right: 65px;
+		}
+		margin-bottom: 60px;
+	}
+	&__card-num {
+		display: block;
+		font-size: 125px;
+		font-weight: 800;
+		color: #c5fffc;
+		margin-right: 30px;
+		width: 70px;
+	}
+	&__card-inner {
+		width: 430px;
+	}
+	&__card-title {
+		display: block;
+		font-size: 20px;
+		font-weight: 800;
+		color: #00bcbe;
+		margin-bottom: 38px;
+	}
+	&__card-text {
+		display: block;
+		margin: 0;
+		font-size: 16px;
+		font-weight: 300;
+		color: #535353;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.process-block {
+		padding-top: 35px;
+		padding-bottom: 30px;
+		&__card {
+			width: 100%;
+		}
+		&__title {
+			font-size: 26px;
+			margin-bottom: 25px;
+		}
+		&__card-title {
+			margin-bottom: 10px;
+		}
+		&__card-num {
+			width: 47px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.process-block {
+		&__title {
+			font-size: 36px;
+		}
+		&__list {
+			justify-content: center;
+		}
+		&__card:not(:nth-child(2n)) {
+			margin-right: 0;
+		}
+	}
+}

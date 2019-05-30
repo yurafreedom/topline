@@ -1,0 +1,130 @@
+.directions-block {
+	&__title {
+		font-size: 48px;
+		line-height: 1;
+		font-weight: 800;
+		width: 814px;
+		margin-bottom: 30px;
+	}
+	&__slider {
+		display: flex;
+		flex-direction: row;	
+		margin-bottom: 50px;
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		width: 360px;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+	&__card-photo {
+		width: 360px;
+		height: 236px;
+		margin-bottom: 25px;
+	}
+	&__card-photo img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		backface-visibility: hidden;
+	}
+	&__card-inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: calc(100% - 320px);
+	}
+	&__card-title {
+		display: block;
+		font-size: 22px;
+		font-weight: 800;
+		color: #000;
+		margin-bottom: 20px;
+	}
+	&__help-block {
+		margin-bottom: 100px;
+	}
+	&__help-block p {
+		margin: 0;
+		font-size: 20px;
+		font-weight: 400;
+		color: #000;
+	}
+	&__help-block a {
+		color: #00bcbe;
+		border-bottom: 1px dotted #00bcbe;
+		transition: all .3s ease-in-out;
+		&:hover, &:focus, &:active {
+			color: lighten(#00bcbe, 15%);
+		}
+	}
+	&__arrow.prev, &__arrow.next {
+		content: '';
+		position: absolute;
+		top: 140px;
+		width: 26px;
+		height: 12px;
+		background-repeat: no-repeat;
+		z-index: 10;
+		background: 0;
+		border: 0;
+		z-index: 10;
+		outline: none;
+	}
+	&__arrow.prev {
+		left: -44px;
+		background-image: url('../img/direction-arrow-left.svg');
+	}
+	&__arrow.next {
+		right: -38px;
+		background-image: url('../img/direction-arrow-right.svg');
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.directions-block {
+		&__title {
+			width: 100%;
+			font-size: 26px;
+		}
+		&__arrow.next {
+			right: 0;
+		}		
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.directions-block {
+		&__title {
+			width: 100%;
+			font-size: 36px;
+		}
+		&__arrow.next {
+			right: -30px;
+		}
+		&__card, &__card-photo {
+			width: 300px;
+		}
+		&__arrow.prev {
+			left: -29px;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1279px) {
+	.directions-block {
+		&__slider {
+			margin: 0 auto;
+			margin-bottom: 50px;
+		}
+		&__arrow.prev {
+			left: -28px;
+		}
+		&__arrow.next {
+			right: -28px;
+		}
+	}
+}

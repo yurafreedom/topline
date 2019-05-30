@@ -1,0 +1,126 @@
+.popup-block {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1300;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	overflow-y: auto;
+	border-radius: 0;
+	display: none;
+}
+
+@keyframes bounce {
+	0%   { transform: translateY(-2000px); }
+	70%  { transform: translateY(30px); 	 }
+	90%  { transform: translateY(-10px);   }
+	100% { transform: translateY(0); 		   }
+}
+
+.popup-block__overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-block__popup {
+	position: relative;
+	box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.5);
+	background-color: #fff;
+	animation-name: bounce;
+	animation-duration: 1.4s;
+	width: 505px;
+	height: auto;
+}
+
+.popup-block__popup .inner__content {
+	height: auto;
+	padding: 85px 104px 51px 56px;
+}
+
+.popup-block__close {
+	position: absolute;
+	top: 27px;
+	right: 27px;
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+
+.popup-block__close::after, .popup-block__close::before {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 1px;
+	background-color: #909AAA;
+	transition: all .15s ease-in;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 1px;
+	margin-top: -1px;
+	margin-left: -15px;
+}
+
+.popup-block__close::before {
+	transform: rotate(45deg);
+}
+
+.popup-block__close::after {
+	transform: rotate(-45deg);
+}
+
+.popup-block__row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+	.popup-block__overlay {
+		overflow: hidden;
+		display: block;
+	}
+	.popup-block__popup {
+		width: 96%;
+		position: absolute;
+		top: auto;
+		margin-top: 60px;
+		margin-bottom: 60px;
+		left: 50%;
+		margin-left: -154px;
+		height: auto;
+		overflow: hidden;
+		overflow-y: auto;
+	}
+	.popup-block__popup .inner__content {
+		max-width: 330px;
+		margin: 0 auto;
+		padding: 60px 10px;
+	}
+	.popup-block__close {
+		margin: 0 auto 40px;
+	}
+	.popup-block__row {
+		display: block;
+    width: 100%;
+	}
+	.popup-block__header {
+		width: 100%;
+	}
+	.popup-block__close {
+		top: 20px;
+		right: 20px;
+	}
+}
