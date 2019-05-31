@@ -3,17 +3,29 @@
 	&__container {
 		position: relative;
 		margin-bottom: 80px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__request-btn {
+		display: flex;
 	}
 	&__title {
 		display: block;
 		font-size: 48px;
 		font-weight: 800;
 		margin-bottom: 38px;
+		order: 1;
 	}
 	&__card {
 		width: 640px;
-		margin-bottom: 50px;
 		transition: all .3s ease-in-out;
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
 	}
 	&__heading {
 		position: relative;
@@ -98,10 +110,41 @@
 
 @media screen and (max-width: 767px) {
 	.questions-block {
+		&__container {
+			margin-bottom: 50px;
+		}
+		&__title {
+			font-size: 26px;
+			margin-bottom: 18px;
+		}
+		&__list {
+			order: 3;
+			margin-bottom: 30px;
+		}
+		&__request-btn {
+			order: 4;
+		}
 		&__photo-block {
+			position: relative;
 			width: 284px;
 			height: 252px;
 			right: 0;
+			order: 2;
+			margin-bottom: 18px;
+		}
+		&__card {
+			width: 100%;
+		}
+		&__article {
+			width: 100%;
+		}
+		.btn--question {
+			font-size: 16px;
+			height: 80px;
+			line-height: 1.2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }

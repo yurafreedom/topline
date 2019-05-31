@@ -59,6 +59,52 @@
 	.call-block {
 		&__container {
 			flex-direction: column;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			margin-bottom: 0;
+		}
+		&__background {
+			top: 0;
+			left: 0;
+			height: 400px;
+		}
+		&__background img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+			backface-visibility: hidden;
+			background-size: 100% auto;
+		}
+		&__heading {
+			margin-right: 0;
+		}
+		&__title {
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+		&__content {
+			flex-direction: column;
+		}
+		&__content-inner {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+		&__content-inner p, &__content-request p {
+			font-size: 16px;
+		}
+		&__content-inner p {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+		&__content-request p {
+			margin-bottom: 30px;
+		}
+		&__content-tel {
+			font-size: 30px;
+		}
+		.btn--request {
+			margin: 0 auto;
 		}
 	}
 }

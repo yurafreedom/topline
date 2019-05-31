@@ -54,6 +54,8 @@
 		color: #000;
 	}
 	&__help-block a {
+		font-size: 20px;
+		font-weight: 400;
 		color: #00bcbe;
 		border-bottom: 1px dotted #00bcbe;
 		transition: all .3s ease-in-out;
@@ -82,17 +84,100 @@
 		right: -15px;
 		background-image: url('../img/direction-arrow-right.svg');
 	}
+	&__card-controls {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	&__counter {
+		display: flex;
+		flex-direction: row;
+	}
+	&__counter-current {
+		display: block;
+		font-size: 30px;
+		font-weight: 400;
+		color: #000;
+		margin-right: 12px;
+	}
+	&__counter-slash {
+		display: block;
+		font-size: 24px;
+		font-weight: 200;
+		color: #000;
+		margin-right: 12px;
+	}
+	&__counter-total {
+		display: block;
+		font-size: 16px;
+		font-weight: 300;
+	}	
 }
 
 @media screen and (max-width: 767px) {
 	.directions-block {
+		overflow: hidden;
 		&__title {
 			width: 100%;
 			font-size: 26px;
+			margin-bottom: 15px;
 		}
 		&__arrow.next {
 			right: 0;
-		}		
+		}
+		&__container {
+			padding-top: 40px;
+		}
+		&__slider {
+			width: 100vh;
+			margin-left: -15px;
+			margin-bottom: 20px;
+		}
+		&__card, &__card-photo {
+			width: 320px;
+		}
+		&__card-photo {
+			height: 200px;
+		}
+		&__card:not(:last-child) {
+			margin-right: 0;
+		}
+		&__card-inner {
+			padding-left: 15px;
+		}
+		.btn--direction {
+			width: 290px;
+			margin: 0 auto;
+		}
+		&__help-block p, &__help-block a {
+			font-size: 18px;
+		}
+		&__help-block a {
+			border: 0;
+		}
+		&__help-block {
+			margin-bottom: 40px;
+		}
+		&__arrow.prev, &__arrow.next {
+			width: 74px;
+			height: 12px;
+		}
+		&__arrow.prev {
+			top: 232px;
+			left: 18px;
+			background-image: url('../img/stories-arrow-left.svg');
+		}
+		&__arrow.next {
+			top: 232px;			
+			left: 228px;
+			z-index: 10;
+			background-image: url('../img/stories-arrow-right.svg');
+		}
+		&__card-controls {
+			display: flex;
+		}
 	}
 }
 
@@ -111,6 +196,9 @@
 		&__arrow.prev {
 			left: -29px;
 		}
+		&__card-controls {
+			display: none;
+		}
 	}
 }
 
@@ -125,6 +213,9 @@
 		}
 		&__arrow.next {
 			right: -28px;
+		}
+		&__card-controls {
+			display: none;
 		}
 	}
 }

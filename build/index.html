@@ -53,7 +53,7 @@
   <header class="page-header">
     <div class="wrapper">
       <div class="page-header__row">
-        <a class="page-header__toggle" href="#" data-toggle="modal" data-target="#header-menu">
+        <a class="page-header__toggle" href="#" id="menu-toggle"><span></span></a>
         <div class="page-header__logo">
           <a href="index.html">
             <img src="static/img/logo.svg" alt="">
@@ -61,10 +61,10 @@
         </div>
         <nav class="page-header__nav">
           <ul class="page-list">
-            <li><a href="#">Главная</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Главная</a></li>
             <li class="company-menu">
               <button type="button" class="btn--company" data-jq-dropdown="#jq-dropdown-2">
-                <span>О компании</span>
+                <span data-target="#company" data-toggle="anchor">О компании</span>
                 <img class="page-header__nav-icon" src="static/img/circle.svg" alt="">
               </button>
               <div id="jq-dropdown-2" class="jq-dropdown jq-dropdown-tip jq-dropdown-relative jq-dropdown-anchor-left">
@@ -76,7 +76,7 @@
             </li>
             <li class="services-menu">
               <button type="button" class="btn--services" data-jq-dropdown="#jq-dropdown-1">
-                <span>Услуги</span>
+                <span data-target="#services" data-toggle="anchor">Услуги</span>
                 <img class="page-header__nav-icon" src="static/img/circle.svg" alt="">
               </button>
               <div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip jq-dropdown-relative jq-dropdown-anchor-left">
@@ -89,9 +89,9 @@
               </div>
               </a>
             </li>
-            <li><a href="#">Цены</a></li>
-            <li><a href="#">Заказать</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Цены</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Заказать</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Контакты</a></li>
           </ul>
         </nav>
         <div class="page-header__contacts">
@@ -104,15 +104,16 @@
       </div>
     </div>
     <div class="page-header__menu popup-block" id="header-menu">
-      <div class="inner__menu"><a class="page-header__toggle close-button" href="#" data-toggle="dismiss"><span></span></a>
+      <div class="inner__menu">
+        <a class="page-header__toggle close-button" href="#" id="menu-close"><span></span></a>
         <nav class="page-header__nav">
-          <ul class="page__list">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Цены</a></li>
-            <li><a href="#">Заказать</a></li>
-            <li><a href="#">Контакты</a></li>
+          <ul class="page-list">
+            <li><a href="#" data-target="#" data-toggle="anchor">Главная</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">О компании</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Услуги</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Цены</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Заказать</a></li>
+            <li><a href="#" data-target="#" data-toggle="anchor">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -257,6 +258,13 @@
                 <div class="directions-block__card-photo">
                   <img src="static/img/slider-photo-1.jpg" alt="">
                 </div>
+                <div class="directions-block__card-controls">
+                  <div class="directions-block__counter">
+                    <span class="directions-block__counter-current">2</span>
+                    <span class="directions-block__counter-slash">/</span>
+                    <small class="directions-block__counter-total">5</small>
+                  </div>
+                </div>
                 <div class="directions-block__card-inner">
                   <h3 class="directions-block__card-title">Продвижение сайтов автосалонов и автодилеров</h3>
                 </div>
@@ -266,6 +274,13 @@
                 <div class="directions-block__card-photo">
                   <img src="static/img/slider-photo-2.jpg" alt="">
                 </div>
+                <div class="directions-block__card-controls">
+                  <div class="directions-block__counter">
+                    <span class="directions-block__counter-current">2</span>
+                    <span class="directions-block__counter-slash">/</span>
+                    <small class="directions-block__counter-total">5</small>
+                  </div>
+                </div>
                 <div class="directions-block__card-inner">
                   <h3 class="directions-block__card-title">Продвижение сайтов магазинов автозапчастей</h3>
                 </div>
@@ -274,6 +289,13 @@
               <div class="directions-block__card">
                 <div class="directions-block__card-photo">
                   <img src="static/img/slider-photo-3.jpg" alt="">
+                </div>
+                <div class="directions-block__card-controls">
+                  <div class="directions-block__counter">
+                    <span class="directions-block__counter-current">2</span>
+                    <span class="directions-block__counter-slash">/</span>
+                    <small class="directions-block__counter-total">5</small>
+                  </div>
                 </div>
                 <div class="directions-block__card-inner">
                   <h3 class="directions-block__card-title">Продвижение сайтов банков</h3>
@@ -426,6 +448,21 @@
                     </a>
                   </div>
                   <p class="stories-block__author-comment">Доволен услугой</p>
+                  <div class="stories-block__more-info">
+                    <div class="stories-block__advantages-block">
+                      <h3 class="stories-block__advantages-title">Достоинства:</h3>
+                      <p class="stories-block__advantages-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <div class="stories-block__disadvantages-block">
+                      <h3 class="stories-block__disadvantages-title">Недостатки:</h3>
+                      <p class="stories-block__disadvantages-text">Не обнаружил</p>
+                    </div>
+                    <div class="stories-block__comment-block">
+                      <h3 class="stories-block__comment-title">Комментарий:</h3>
+                      <p class="stories-block__commnet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <a href="#" class="stories-block__more-link">Посмотреть скан</a>
+                  </div>
                 </div>
                 <div class="stories-block__card">
                   <h3 class="stories-block__card-title">Иванов Иван Иванович</h3>
@@ -457,6 +494,21 @@
                     </a>
                   </div>
                   <p class="stories-block__author-comment">Доволен услугой</p>
+                  <div class="stories-block__more-info">
+                    <div class="stories-block__advantages-block">
+                      <h3 class="stories-block__advantages-title">Достоинства:</h3>
+                      <p class="stories-block__advantages-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <div class="stories-block__disadvantages-block">
+                      <h3 class="stories-block__disadvantages-title">Недостатки:</h3>
+                      <p class="stories-block__disadvantages-text">Не обнаружил</p>
+                    </div>
+                    <div class="stories-block__comment-block">
+                      <h3 class="stories-block__comment-title">Комментарий:</h3>
+                      <p class="stories-block__commnet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <a href="#" class="stories-block__more-link">Посмотреть скан</a>
+                  </div>
                 </div>
                 <div class="stories-block__card">
                   <h3 class="stories-block__card-title">Иванов Иван Иванович</h3>
@@ -488,6 +540,21 @@
                     </a>
                   </div>
                   <p class="stories-block__author-comment">Доволен услугой</p>
+                  <div class="stories-block__more-info">
+                    <div class="stories-block__advantages-block">
+                      <h3 class="stories-block__advantages-title">Достоинства:</h3>
+                      <p class="stories-block__advantages-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <div class="stories-block__disadvantages-block">
+                      <h3 class="stories-block__disadvantages-title">Недостатки:</h3>
+                      <p class="stories-block__disadvantages-text">Не обнаружил</p>
+                    </div>
+                    <div class="stories-block__comment-block">
+                      <h3 class="stories-block__comment-title">Комментарий:</h3>
+                      <p class="stories-block__commnet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <a href="#" class="stories-block__more-link">Посмотреть скан</a>
+                  </div>
                 </div>
                 <div class="stories-block__card">
                   <h3 class="stories-block__card-title">Иванов Иван Иванович</h3>
@@ -519,6 +586,21 @@
                     </a>
                   </div>
                   <p class="stories-block__author-comment">Доволен услугой</p>
+                  <div class="stories-block__more-info">
+                    <div class="stories-block__advantages-block">
+                      <h3 class="stories-block__advantages-title">Достоинства:</h3>
+                      <p class="stories-block__advantages-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <div class="stories-block__disadvantages-block">
+                      <h3 class="stories-block__disadvantages-title">Недостатки:</h3>
+                      <p class="stories-block__disadvantages-text">Не обнаружил</p>
+                    </div>
+                    <div class="stories-block__comment-block">
+                      <h3 class="stories-block__comment-title">Комментарий:</h3>
+                      <p class="stories-block__commnet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <a href="#" class="stories-block__more-link">Посмотреть скан</a>
+                  </div>
                 </div>
                 <div class="stories-block__card">
                   <h3 class="stories-block__card-title">Иванов Иван Иванович</h3>
@@ -550,6 +632,21 @@
                     </a>
                   </div>
                   <p class="stories-block__author-comment">Доволен услугой</p>
+                  <div class="stories-block__more-info">
+                    <div class="stories-block__advantages-block">
+                      <h3 class="stories-block__advantages-title">Достоинства:</h3>
+                      <p class="stories-block__advantages-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <div class="stories-block__disadvantages-block">
+                      <h3 class="stories-block__disadvantages-title">Недостатки:</h3>
+                      <p class="stories-block__disadvantages-text">Не обнаружил</p>
+                    </div>
+                    <div class="stories-block__comment-block">
+                      <h3 class="stories-block__comment-title">Комментарий:</h3>
+                      <p class="stories-block__commnet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                    </div>
+                    <a href="#" class="stories-block__more-link">Посмотреть скан</a>
+                  </div>
                 </div>
               </div>
             </div>

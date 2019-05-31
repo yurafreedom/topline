@@ -55,6 +55,7 @@
 		display: block;
 		text-align: center;
 		font-size: 18px;
+		line-height: 1.66;
 		font-weight: 800;
 		color: #000;
 		margin-bottom: 20px;
@@ -130,6 +131,7 @@
 	&__content-article b {
 		display: block;
 		font-size: 18px;
+		line-height: 1.33;
 		font-weight: 800;
 		color: #000;
 	}
@@ -139,6 +141,7 @@
 	&__content-text p {
 		display: block;
 		font-size: 16px;
+		line-height: 1.5;
 		font-weight: 400;
 		color: #000;
 		margin: 0;
@@ -152,34 +155,100 @@
 	&__content-controls .btn--review {
 		margin-right: 10px;
 	}
+	&__more-info {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 767px) {
 	.stories-block {
+		background-color: #fff;
 		&__container {
 			flex-direction: column;
+			padding-top: 0;
 		}
 		&__title {
-			position: absolute;
+			position: relative;
 			width: 100%;
-			font-size: 36px;
-			top: 45px;
+			font-size: 26px;
+			top: 0;
+			margin-bottom: 25px;
+		}
+		&__content-article {
+			padding-left: 0;
+		}
+		&__heading-block {
+			margin-right: 0;
 		}
 		&__slider {
-			width: 240px;
+			width: 280px;
+			margin-top: 118px;
 		}
 		&__card {
-			width: 240px;
+			width: 280px;
 		}
 		&__card-photo {
-			width: 150px;
-			height: 150px;
+			width: 274px;
+			height: 274px;
+		}
+		&__content-article {
+			margin-bottom: 0;
+			position: absolute;
+			top: 82px;
+		}
+		&__content-article p, &__content-text p {
+			margin-bottom: 8px;
 		}
 		&__content-controls {
 			flex-direction: column;
 		}
 		&__content-controls .btn--review, .btn--stories-request {
 			width: 100%;
+		}
+		&__author-comment {
+			margin-bottom: 40px;
+		}
+		&__content-text, .btn--stories-request {
+			display: none;
+		}
+		&__more-info {
+			display: flex;
+			flex-direction: column;
+		}
+		&__advantages-block, &__disadvantages-block, &__comment-block {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 30px;
+		}
+		&__comment-block {
+			margin-bottom: 15px;
+		}		
+		&__advantages-title, &__disadvantages-title, &__comment-title {
+			display: block;
+			font-size: 18px;
+			line-height: 1.66;
+			font-weight: 800;
+			color: #000;
+		}
+		&__advantages-text, &__disadvantages-text, &__comment-text {
+			display: block;
+			margin: 0;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.375;
+			color: #000;
+		}
+		&__disadvantages-text {
+			line-height: 1.875;
+		}
+		&__more-link {
+			display: flex;
+			font-size: 16px;
+			font-weight: 800;
+			line-height: 1.875;
+			border-bottom: 1px dotted #00bcbe;
+			color: #00bcbe;
+			margin-bottom: 30px;
 		}
 	}
 }
