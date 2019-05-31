@@ -11,6 +11,12 @@
 		flex-direction: row;	
 		margin-bottom: 50px;
 	}
+	&__slider .slick-track {
+		display: flex;
+	}
+	&__slider .slick-slide {
+		height: auto;
+	}	
 	&__card {
 		display: flex;
 		flex-direction: column;
@@ -35,7 +41,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		height: calc(100% - 320px);
+		height: calc(100% - 378px);
 	}
 	&__card-title {
 		display: block;
@@ -181,6 +187,9 @@
 		&__card-controls {
 			display: flex;
 		}
+		&__card-inner {
+			height: calc(100% - 342px);
+		}
 	}
 }
 
@@ -201,6 +210,9 @@
 		}
 		&__card-controls {
 			display: none;
+		}
+		&__card-inner {
+			height: calc(100% - 312px);
 		}
 	}
 }

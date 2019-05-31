@@ -166,6 +166,7 @@
 		&__container {
 			flex-direction: column;
 			padding-top: 0;
+			padding-bottom: 36px;
 		}
 		&__title {
 			position: relative;
@@ -258,6 +259,9 @@
 		&__arrow.prev, &__arrow.next {
 			bottom: auto;
 			top: 346px;
+		}
+		.btn--review {
+			line-height: 3.2;
 		}
 	}
 }

@@ -18,7 +18,6 @@
 		font-size: 48px;
 		font-weight: 800;
 		margin-bottom: 38px;
-		order: 1;
 	}
 	&__card {
 		width: 640px;
@@ -116,6 +115,7 @@
 		&__title {
 			font-size: 26px;
 			margin-bottom: 18px;
+			order: 1;			
 		}
 		&__list {
 			order: 3;
@@ -153,6 +153,9 @@
 	.questions-block { 
 		&__photo-block {
 			display: none;
+		}
+		&__list {
+			margin-bottom: 50px;
 		}
 	}
 }
