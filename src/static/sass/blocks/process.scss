@@ -66,6 +66,9 @@
 		&__card-num {
 			width: 47px;
 		}
+		&__card:not(:nth-child(2n)) {
+			margin-right: 0;
+		}
 	}
 }
 

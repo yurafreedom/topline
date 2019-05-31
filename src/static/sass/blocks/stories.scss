@@ -214,16 +214,20 @@
 		&__more-info {
 			display: flex;
 			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
 		}
 		&__advantages-block, &__disadvantages-block, &__comment-block {
 			display: flex;
 			flex-direction: column;
 			margin-bottom: 30px;
+			width: 100%;
 		}
 		&__comment-block {
 			margin-bottom: 15px;
 		}		
 		&__advantages-title, &__disadvantages-title, &__comment-title {
+			width: 100%;
 			display: block;
 			font-size: 18px;
 			line-height: 1.66;
@@ -231,6 +235,7 @@
 			color: #000;
 		}
 		&__advantages-text, &__disadvantages-text, &__comment-text {
+			width: 100%;
 			display: block;
 			margin: 0;
 			font-size: 16px;
@@ -242,13 +247,17 @@
 			line-height: 1.875;
 		}
 		&__more-link {
-			display: flex;
+			display: inline-block;
 			font-size: 16px;
 			font-weight: 800;
 			line-height: 1.875;
 			border-bottom: 1px dotted #00bcbe;
 			color: #00bcbe;
 			margin-bottom: 30px;
+		}
+		&__arrow.prev, &__arrow.next {
+			bottom: auto;
+			top: 346px;
 		}
 	}
 }
