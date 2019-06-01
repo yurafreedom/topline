@@ -9,6 +9,7 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 50px;
 	}
 	&__request-btn {
 		display: flex;
@@ -153,9 +154,6 @@
 	.questions-block { 
 		&__photo-block {
 			display: none;
-		}
-		&__list {
-			margin-bottom: 50px;
 		}
 	}
 }

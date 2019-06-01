@@ -95,6 +95,23 @@ $('.directions-block__slider').slick({
     }]    
 });
 
+// Тут мы узнаем сколько вообще существует слайдов
+var DirectionsSlidesCount = $('.directions-block__slider').children().length;
+// В блок вписываем сколько всего слайдов
+$('.directions-block__counter .directions-block__counter-total').text(DirectionsSlidesCount);
+// Функция при смене слайда
+$('.directions-block__slider').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+ var nextSlideNum = nextSlide + 1;
+ $('.directions-block__counter .directions-block__counter-current').text(nextSlideNum);
+});
+
+var StoriesSlidesCount = $('.stories-block__slider').children().length;
+$('.stories-block__counter .stories-block__counter-total').text(StoriesSlidesCount);
+$('.stories-block__slider').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+ var nextSlideNum = nextSlide + 1;
+ $('.stories-block__counter .stories-block__counter-current').text(nextSlideNum);
+});
+
 $('.stories-block__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

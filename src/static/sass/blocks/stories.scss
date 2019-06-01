@@ -255,6 +255,11 @@
 			border-bottom: 1px dotted #00bcbe;
 			color: #00bcbe;
 			margin-bottom: 30px;
+			transition: all .3s ease-in-out;
+			&:hover, &:active, &:focus {
+				color: lighten(#00bcbe, 15%);
+				border-color: lighten(#00bcbe, 15%);
+			}
 		}
 		&__arrow.prev, &__arrow.next {
 			bottom: auto;
