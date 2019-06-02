@@ -104,6 +104,7 @@
 
 @media screen and (max-width: 767px) {
 	.how-block {
+		padding-top: 0;
 		&__heading {
 			flex-direction: column;
 			margin-bottom: 40px;
