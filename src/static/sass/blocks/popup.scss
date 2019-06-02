@@ -129,7 +129,7 @@ input[type="checkbox"]:not(:checked) + label::before {
 	content: "";
 	position: absolute;
 	left: 0px;
-	top: 0px;
+	top: -8px;
 	box-sizing: border-box;
 	position: relative;
 	border: 1px solid #fff;
@@ -142,7 +142,7 @@ input[type="checkbox"]:checked + label::after,
 input[type="checkbox"]:not(:checked) + label::after {
 	content: "";
 	position: absolute;
-	top: 6px;
+	top: 14px;
 	left: 8px;
 	width: 10px;
 	height: 10px;
@@ -162,8 +162,10 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .popup-block__label span {
+	display: inline-block;
+	width: 200px;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1;
 	font-weight: 400;
 	color: #fff;
 	a {
@@ -267,14 +269,9 @@ input[type="checkbox"]:checked + label::after {
 	.popup-block__overlay {
 		display: block;
 		padding: 0;
-		overflow: auto;
 	}
 	.popup-block__popup {
 		width: 100%;
-		position: absolute;
-		top: auto;
-		left: 0;
-		height: auto;
 	}
 	#popup-call .popup-block__popup {
 		margin-top: 26px;
