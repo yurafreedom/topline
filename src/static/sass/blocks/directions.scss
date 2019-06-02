@@ -21,9 +21,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 360px;
-		&:not(:last-child) {
-			margin-right: 30px;
-		}
+		margin: 0 15px;
+		outline: 0;
 	}
 	&__card-photo {
 		width: 360px;
@@ -138,7 +137,7 @@
 			padding-top: 40px;
 		}
 		&__slider {
-			width: cacl(100% + 30px);
+			width: calc(100% + 30px);
 			margin-left: -15px;
 			margin-bottom: 20px;
 		}
@@ -150,9 +149,6 @@
 		}
 		&__card-photo {
 			height: 200px;
-		}
-		&__card:not(:last-child) {
-			margin-right: 0;
 		}
 		&__card-inner {
 			padding-left: 15px;
@@ -211,6 +207,12 @@
 		}
 		&__card-inner {
 			height: calc(100% - 312px);
+		}
+		&__arrow.prev {
+			left: -22px;
+		}
+		&__arrow.next {
+			right: 0;
 		}
 	}
 }

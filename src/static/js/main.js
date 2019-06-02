@@ -86,13 +86,23 @@ $('.directions-block__slider').slick({
     arrows: true,
     prevArrow: '<button class="prev directions-block__arrow"></button>',
     nextArrow: '<button class="next directions-block__arrow"></button>',
-    responsive: [{
-        breakpoint: 767,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           arrows: !false
         }
-    }]    
+      }
+    ]
 });
 
 // Тут мы узнаем сколько вообще существует слайдов
