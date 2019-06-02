@@ -92,14 +92,14 @@ $('.directions-block__slider').slick({
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        },
+        }
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: !false
+          arrows: false
         }
       }
     ]
