@@ -2,7 +2,7 @@
 	overflow: hidden;
 	&__container {
 		position: relative;
-		margin-bottom: 80px;
+		padding-bottom: 80px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -18,21 +18,19 @@
 		display: block;
 		font-size: 48px;
 		font-weight: 800;
-		margin-bottom: 38px;
+		margin-top: 12px;
+		margin-bottom: 40px;
 	}
 	&__card {
 		width: 640px;
 		transition: all .3s ease-in-out;
-		&:not(:last-child) {
-			margin-bottom: 50px;
-		}
+		margin-bottom: 28px;
 	}
 	&__heading {
 		position: relative;
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		height: 60px;
 		padding-left: 36px;
 		transition: all .3s ease-in-out;	
 		&:last-child {
@@ -40,7 +38,7 @@
 		}
 	}
 	&__body {
-		padding: 18px 35px 26px 35px;
+		padding: 18px 35px 0 35px;
 		transition: all .3s ease-in-out;
 	}
 	&__article {
@@ -48,8 +46,10 @@
 		font-weight: 800;
 		color: #00bcbe;
 		margin: 0;
+		margin-top: 22px;
 		width: 600px;
 		transition: all .3s ease-in-out;
+		z-index: 2;
 		&:hover {
 			color: darken(#00bcbe, 15%);
 		}
@@ -89,6 +89,9 @@
 	&__card.active {
 		margin-bottom: 30px;
 	}
+	&__card.active &__collapse {
+		display: block;
+	}
 	&__card.active &--plus::after {
 		transform: rotate(0deg);
 	}
@@ -106,12 +109,69 @@
 		object-fit: cover;
 		backface-visibility: hidden;
 	}
+	&.internal-block {
+		padding-top: 75px;
+	}
+	&.internal-block &__title {
+		max-width: 510px;
+	}
+	&.internal-block &__card.active {
+		margin-bottom: 24px;
+	}
+	&.internal-block &__body ul li {
+		margin-bottom: 25px;
+	}
+	&.internal-block &__body p {
+		position: relative;
+		display: block;
+		font-size: 16px;
+		font-weight: 300;
+		margin: 0;
+		color: #535353;
+		a {
+			font-weight: 700;
+			color: #00bcbe;
+		}
+	}
+	&.internal-block &__body ul p {
+		padding-left: 20px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 0;
+			width: 8px;
+			height: 8px;
+			background-color: #00bcbe;
+		}
+	}
+	&.internal-block &__body &__body-article {
+		margin-bottom: 35px;
+	}
+	&__list.internal-block__list &__card {
+		width: 100%;
+	}
+	&__request-btn.internal-block__request-btn .btn--question {
+		width: 470px;
+		margin: 0 auto;
+		line-height: 3.25;
+		font-size: 20px;
+		text-transform: none;
+		font-weight: 700;
+	}
+	&.next-block {
+		padding-top: 50px;
+	}
+	&.next-block .questions-block__title {
+		margin-top: 0;
+	}
 }
 
 @media screen and (max-width: 767px) {
 	.questions-block {
 		&__container {
 			margin-bottom: 50px;
+			padding-bottom: 0;
 		}
 		&__title {
 			font-size: 26px;
@@ -146,6 +206,32 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+		&__request-btn.internal-block__request-btn .btn--question {
+			width: 100%;
+			line-height: 1.2;
+		}
+		&.internal-block {
+			padding-top: 30px;
+		}
+		&.internal-block &__container {
+			padding-bottom: 0;
+			margin-bottom: 45px;
+		}
+		&.internal-block &__title {
+			margin-top: 0;
+		}
+		&.internal-block &__photo-block {
+			margin-bottom: 30px;
+		}
+		&.internal-block &__body &__body-article {
+			margin-bottom: 20px;
+		}
+		&.internal-block &__body ul li {
+			margin-bottom: 20px;
+		}
+		&.next-block {
+			padding-top: 40px;
 		}
 	}
 }

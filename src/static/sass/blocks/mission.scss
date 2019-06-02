@@ -11,12 +11,15 @@
 		justify-content: space-between;
 		margin-bottom: 20px;
 	}
+	&__card {
+		position: relative;
+		overflow: hidden;
+	}	
 	&__heading &__card {
 		position: relative;
 		width: 555px;
 		background-color: #ededed;
 		padding: 35px 30px;
-		overflow: hidden;
 	}
 	&__title {
 		display: block;
@@ -32,10 +35,6 @@
 		margin: 0;
 		z-index: 3;
 	}
-	&__heading &__card:nth-child(1) &__num {
-		bottom: -58px;
-    right: 0;
-	}
 	&__num {
 		position: absolute;
 		bottom: 0;
@@ -45,10 +44,73 @@
 		color: #fff;
 		z-index: 1;
 	}
+	&__num-one {
+		bottom: -58px;
+		right: 0;
+	}
+	&__num-two {
+		bottom: -58px;
+		right: 20px;
+	}
 	&__bottom &__card {
 		width: 100%;
 		background-color: #ededed;
 		padding: 30px;
-		overflow: hidden;
+	}
+	&__num-three {
+		bottom: -70px;
+		right: 20px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.mission-block {
+		&__container {
+			padding-top: 50px;
+			padding-bottom: 38px;
+		}
+		&__list {
+			width: 100vh;
+			max-width: 320px;
+			margin-left: -15px;
+			overflow: hidden;
+		}
+		&__title {
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+		&__heading {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin-bottom: 0;
+		}
+		&__heading &__card {
+			width: 100%;
+			padding: 30px 15px;
+			margin-bottom: 10px;
+		}
+		&__num-one {
+			bottom: -50px;
+			right: 7px;
+		}
+		&__num-two {
+			right: 9px;
+		}
+		&__num-three {
+			right: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.mission-block {
+		&__heading &__card {
+			width: 48%;
+			padding: 20px;
+		}
+		&__num-three {
+			bottom: -60px;
+		}
 	}
 }

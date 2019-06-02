@@ -80,9 +80,8 @@ $("#menu-close").click(function(e) {
 });
 
 $('.directions-block__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,    
+    slidesToShow: 3,
+    slidesToScroll: 1,   
     infinite: true,
     arrows: true,
     prevArrow: '<button class="prev directions-block__arrow"></button>',
@@ -90,7 +89,8 @@ $('.directions-block__slider').slick({
     responsive: [{
         breakpoint: 767,
         settings: {
-            arrows: !false
+          slidesToShow: 1,
+          arrows: !false
         }
     }]    
 });

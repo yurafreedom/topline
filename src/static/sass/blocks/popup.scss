@@ -29,39 +29,46 @@
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0.7);
+	background: linear-gradient(to bottom, rgba(34, 35, 41, 0.96), rgba(61, 71, 82, 0.96));;
 }
 
 .popup-block__popup {
 	position: relative;
 	box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.5);
-	background-color: #fff;
+	background-color: rgba(21, 24, 26, 0.67);
 	animation-name: bounce;
 	animation-duration: 1.4s;
-	width: 505px;
+	width: 680px;
 	height: auto;
 }
 
+.popup-block__header {
+	width: 100%;
+}
+
 .popup-block__popup .inner__content {
-	height: auto;
-	padding: 85px 104px 51px 56px;
+	padding-left: 38px;
+	padding-right: 50px;
+	padding-top: 90px;
+	padding-bottom: 58px;
 }
 
 .popup-block__close {
 	position: absolute;
-	top: 27px;
-	right: 27px;
+	top: 25px;
+	left: 50%;
+	transform: translateX(-50%);
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 35px;
+	height: 35px;
 }
 
 .popup-block__close::after, .popup-block__close::before {
 	content: "";
 	display: block;
 	width: 30px;
-	height: 1px;
-	background-color: #909AAA;
+	height: 2px;
+	background-color: #fff;
 	transition: all .15s ease-in;
 	position: absolute;
 	top: 50%;
@@ -85,6 +92,90 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	width: 100%;
+}
+
+.popup-block__form-title {
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 60px;
+}
+
+.form-input.popup-block__form-textarea {
+	height: 125px;
+	margin-bottom: 30px;
+}
+
+.popup-block__checkbox-block {
+	margin-bottom: 50px;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+	display: none;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label {
+	display: block;
+	position: relative;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label::before, 
+input[type="checkbox"]:not(:checked) + label::before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 25px;
+	height: 25px;
+	box-sizing: border-box;
+	position: relative;
+	border: 1px solid #fff;
+	padding: 0 10px;
+	margin-right: 14px;
+  background: 0;
+}
+
+input[type="checkbox"]:checked + label::after, 
+input[type="checkbox"]:not(:checked) + label::after {
+	content: "";
+	position: absolute;
+	top: 18px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	transition: all 0.2s ease;
+	background-image: url('../img/checked.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+input[type="checkbox"]:not(:checked) + label::after {
+	opacity: 0;
+}
+
+input[type="checkbox"]:checked + label::after {
+	opacity: 1;
+}
+
+.popup-block__label span {
+	font-size: 16px;
+	line-height: 3;
+	font-weight: 400;
+	color: #fff;
+	a {
+		font-size: 16px;
+		line-height: 3;
+		font-weight: 400;
+		color: #fff;
+		text-decoration: underline;
+	}
 }
 
 @media screen and (max-width: 767px) {
