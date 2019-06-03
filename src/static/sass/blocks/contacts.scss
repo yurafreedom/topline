@@ -42,6 +42,17 @@
 		cursor: pointer;
 		transition: all .3s ease-in-out;
 	}
+	&__map-photo {
+		width: 100%;
+		height: 481px;
+	}
+	&__map-photo img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		backface-visibility: hidden;
+	}
 	&__map-block:hover .btn--map,
 	&__map-block:hover &__map-overlay {
 		opacity: 1;
@@ -60,6 +71,13 @@
 		overflow: hidden;
 		background: linear-gradient(to bottom, rgba(34, 35, 41, 0.8), rgba(61, 71, 82, 0.8));
 		transition: all .6s ease-in-out;
+	}
+	.btn--map {
+		position: absolute;
+		top: 210px;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
 	}
 }
 
@@ -81,6 +99,9 @@
 		}
 		&__card:nth-child(4) &__title {
 			margin-bottom: 10px;
+		}
+		&__map-overlay, .btn--map {
+			opacity: 1;
 		}
 	}
 }
@@ -104,6 +125,9 @@
 		}
 		.btn--contacts-request {
 			width: 180px;
+		}
+		&__map-overlay, .btn--map {
+			opacity: 1;
 		}
 	}
 }
