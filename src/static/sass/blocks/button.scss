@@ -3,13 +3,12 @@
 	background: none;
 	outline: none;
 	padding: 0;
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font-size: 18px;
 	font-weight: 800;
-	line-height: 3.3;	
+	height: 60px;	
 	color: #000;
 	text-transform: uppercase;
 	text-align: center;
@@ -57,7 +56,7 @@
 	width: 305px;
 	font-size: 24px;
 	font-weight: 800;
-	line-height: 3.7916;
+	height: 90px;
 	background: none;
 	border: 2px solid #000;
 	text-transform: none;
@@ -113,7 +112,7 @@
 	width: 272px;
 	font-size: 24px;
 	font-weight: 700;
-	line-height: 3.166;
+	height: 76px;
 	text-transform: none;
 	border-radius: 3px;
 	margin: 0 auto;
