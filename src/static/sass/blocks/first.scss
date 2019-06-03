@@ -83,6 +83,7 @@
 @media screen and (max-width: 767px) {
 	.first-block {
 		padding-top: 120px;
+		background-position: top;
 		&__container {
 			flex-direction: column;
 		}

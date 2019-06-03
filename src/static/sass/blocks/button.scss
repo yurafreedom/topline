@@ -17,8 +17,8 @@
 	background-color: #00fff6;
 	transition: all .3s ease-in-out;
 	&:hover, &:focus, &:active {
-		background-color: lighten(#00fff6, 30%);
-		color: #fff;
+    background-color: #00f4d2;
+    box-shadow: 0 4px 24px 0 rgba(20,186,180,.45);
 	}
 }
 

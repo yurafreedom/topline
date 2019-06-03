@@ -9,14 +9,22 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
+	&__title {
+		display: block;
+		font-size: 48px;
+		font-weight: 800;
+		color: #000;
+		line-height: 1;
+		margin-bottom: 60px;
+	}
 	&__card {
 		display: flex;
 		flex-direction: row;
 	}
-	&__card:nth-child(3) &__title {
+	&__card:nth-child(3) &__card-title {
 		width: 100px;
 	}
-	&__title {
+	&__card-title {
 		margin-left: 20px;
 		width: 150px;
 	}
@@ -26,13 +34,18 @@
 	.about-block {
 		padding-top: 20px;
 		padding-bottom: 20px;
+		&__title {
+			font-size: 26px;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}		
 		&__card:not(:last-child) {
 			margin-right: 0;
 			margin-bottom: 36px;
 		}
-		&__card:nth-child(3) &__title {
+		&__card:nth-child(3) &__card-title {
 			width: 150px;
-		}		
+		}
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -49,7 +62,7 @@
 		&__card:nth-child(1n) {
 			margin-right: 50px;
 		}
-		&__card:nth-child(3) &__title {
+		&__card:nth-child(3) &__card-title {
 			width: 150px;
 		}
 	}
