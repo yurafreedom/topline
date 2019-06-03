@@ -119,6 +119,20 @@
 	margin: 0 auto;
 }
 
+.btn--map {
+	position: absolute;
+	top: 143px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-transform: none;
+	width: 272px;
+}
+
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 	.btn {
 		font-size: 16px;
