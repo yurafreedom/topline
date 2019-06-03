@@ -144,9 +144,9 @@
 .page-header__toggle.close-button {
 	width: 34px;
 	height: 34px;
-	left: auto;
+	left: 50%;
+	transform: translateX(-50%);
 	top: 30px;
-	right: 30px;
 }
 
 .page-header__toggle.close-button span {

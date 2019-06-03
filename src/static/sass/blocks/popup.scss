@@ -48,7 +48,8 @@
 .popup-block__close {
 	position: absolute;
 	top: 25px;
-	right: 25px;
+	left: 50%;
+	transform: translateX(-50%);
 	display: block;
 	width: 35px;
 	height: 35px;
