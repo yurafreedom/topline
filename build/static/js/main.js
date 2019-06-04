@@ -155,3 +155,13 @@ $(".rate-block").rateYo({
     spacing: "5px",
     starSvg: '<svg width="17" height="16" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(-17817 -495)"><g id="Shape"><use xlink:href="#path0_fill" transform="translate(17817 495)"/></g></g><defs><path id="path0_fill" d="M 8.90195 0.263541L 11.0643 5.31475L 16.6003 5.78413C 16.9843 5.81685 17.1405 6.28968 16.849 6.53858L 12.6499 10.1291L 13.9082 15.4706C 13.9955 15.8418 13.588 16.1337 13.2581 15.9365L 8.50054 13.1047L 3.74296 15.9365C 3.41223 16.1329 3.00559 15.8409 3.09285 15.4706L 4.35118 10.1291L 0.151211 6.53772C -0.140248 6.28882 0.0150805 5.81599 0.399911 5.78326L 5.93588 5.31389L 8.09826 0.263541C 8.24835 -0.0878471 8.75186 -0.0878471 8.90195 0.263541Z"/></defs></svg>'
 });
+
+
+$('img').Lazy({
+    scrollDirection: 'vertical',
+    effect: 'fadeIn',
+    visibleOnly: true,
+    onError: function(element) {
+        console.log('error loading ' + element.data('src'));
+    }
+});
