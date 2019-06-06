@@ -2,7 +2,6 @@
 	&__container {
 		padding-bottom: 150px;
 		position: relative;
-		overflow: hidden;
 	}
 	&__title {
 		display: block;
@@ -142,7 +141,8 @@
 		&__differences-background {
 			top: -30px;
 			left: 0;
-			width: 100%;
+			width: calc(100% + 30px);
+			margin-left: -15px;
 			height: 406px;
 		}
 		&__differences-background span {

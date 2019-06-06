@@ -316,7 +316,12 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.page-header__menu .page-header__nav li a {
+	.page-header__menu .page-header__nav ul.page-header__inner-menu {
+		display: none;
+		padding: 15px 20px 5px 20px;
+	}
+	.page-header__menu .page-header__nav li a, .page-header__menu .page-header__inner-menu li a {
+		position: relative;
 		font-size: 15px;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -326,6 +331,20 @@
 		&:hover, &:focus, &:active {
 			color: #fff;
 		}
+	}
+	.page-header__menu .icon--chevron {
+		position: absolute;
+		top: 2px;
+		right: -25px;
+		fill: #00fff6;
+		transition: all .3s ease-in-out;
+	}
+	.page-header__menu .page-header__nav li a.active .page-header__inner-menu {
+		display: flex;
+	}
+	.page-header__menu .page-header__nav li a.active .icon--chevron {
+		transform: rotate(180deg);
+		fill: #fff;
 	}
 }
 

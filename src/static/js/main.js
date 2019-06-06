@@ -164,3 +164,8 @@ $('img').Lazy({
         console.log('error loading ' + element.data('src'));
     }
 });
+
+$('.page-header__menu .page-header__nav li a').on('click', function() {
+  $(this).toggleClass('active');
+  $(this).next().slideToggle(200);
+});

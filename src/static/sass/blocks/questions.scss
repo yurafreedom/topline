@@ -187,6 +187,7 @@
 		&__list {
 			order: 3;
 			margin-bottom: 30px;
+			min-height: auto;
 		}
 		&__request-btn {
 			order: 4;
@@ -210,8 +211,11 @@
 			height: 80px;
 			line-height: 1.2;
 			display: flex;
+			text-align: center;
 			justify-content: center;
 			align-items: center;
+			padding-left: 40px;
+			padding-right: 40px;
 		}
 		&__request-btn.internal-block__request-btn .btn--question {
 			width: 100%;

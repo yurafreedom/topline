@@ -122,8 +122,8 @@ input[type="checkbox"]:checked + label::before,
 input[type="checkbox"]:not(:checked) + label::before {
 	content: "";
 	position: absolute;
-	left: 0px;
-	top: -8px;
+	left: 0;
+	top: 0;
 	box-sizing: border-box;
 	position: relative;
 	border: 1px solid #fff;
@@ -136,7 +136,7 @@ input[type="checkbox"]:checked + label::after,
 input[type="checkbox"]:not(:checked) + label::after {
 	content: "";
 	position: absolute;
-	top: 14px;
+	top: 6px;
 	left: 8px;
 	width: 10px;
 	height: 10px;
@@ -156,8 +156,6 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .popup-block__label span {
-	display: inline-block;
-	width: 200px;
 	font-size: 16px;
 	line-height: 1;
 	font-weight: 400;
@@ -296,5 +294,17 @@ input[type="checkbox"]:checked + label::after {
 	}
 	.popup-block__close {
 		top: 20px;
+	}
+	.popup-block__label span {
+		display: inline-block;
+		width: 200px;
+	}
+	input[type="checkbox"]:checked + label::before, 
+	input[type="checkbox"]:not(:checked) + label::before {
+		top: -8px;
+	}
+	input[type="checkbox"]:checked + label::after, 
+	input[type="checkbox"]:not(:checked) + label::after {
+		top: 14px;
 	}
 }
